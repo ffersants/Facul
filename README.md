@@ -12,9 +12,8 @@ public class HelloWorld{
 ```
 <h2>:white_circle: Conditionals / Flux control</h2><br>
 The syntax of all conditionals is the same of Javascript and C, just in <strong>if/else</strong> statements you can't put the block of code between brackets. So it looks like this:<br>
-```java
-package teste;
 
+```java
 public class Teste{
     public static void main(String[] args){
         int num1 = 10, num2 = 20; 
@@ -39,15 +38,21 @@ int [ ] numsDois = {0,0,0,0,0};
 ```
 <br>
 You see that the syntax is 
-<strong><i>
-	varType [ ] varName = new varType [totalOfIndexes] <br>
-</i></strong>
+<strong>
+	<i>
+		varType [ ] varName = new varType [totalOfIndexes] 
+	</i>
+</strong>
+<br>
 	or
-<strong><i>
-	 varType [ ] varName = {elements, in, their, position};
-</i></strong>
-
-<br><h2>:heavy_exclamation_mark: Known Issues :heavy_exclamation_mark:<h2><br>
+<br>
+<strong>
+	<i>
+	 	varType [ ] varName = {elements, in, their, position};
+	</i>
+</strong>
+<br>
+<h2>:heavy_exclamation_mark: Known Issues :heavy_exclamation_mark:</h2><br>
 	<ul>
 		<li> Don't use simple 'quotation marks';</li>
 	</ul>
