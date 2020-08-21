@@ -34,11 +34,12 @@ The things with arrays is just the declaring part, it's a little bit different f
 <br>
 ```java
 	int [ ] nums = new int [5]; 
-	//or 
+
 	int [ ] numsDois = {0,0,0,0,0}; 
 ```
 <br>
-You see that the syntax is 
+You see that the syntax is
+<br> 
 <strong>
 	<i>
 		varType [ ] varName = new varType [totalOfIndexes] 
