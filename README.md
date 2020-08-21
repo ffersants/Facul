@@ -33,9 +33,13 @@ public class Teste{
 The things with arrays is just the declaring part, it's a little bit different from C and Javascript. Take a look:
 <br>
 ```java
-	int [ ] nums = new int [5]; 
-
-	int [ ] numsDois = {0,0,0,0,0}; 
+public class TwoWaysOfDeclaringArrays{
+	public static void main(String[] args) {
+		int [ ] nums = new int [5]; 
+			//or
+		int [ ] numsDois = {0,0,0,0,0}; 
+	}
+}	
 ```
 <br>
 You see that the syntax is
