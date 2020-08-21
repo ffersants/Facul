@@ -29,9 +29,7 @@ public class Teste{
 }
 ```
 <br>
-<h4>:white_circle: Arrays</h4><br>
-The things with arrays is just the declaring part, it's a little bit different from C and Javascript. Take a look:
-<br>
+
 ```java
 public class TwoWaysOfDeclaringArrays{
 	public static void main(String[] args) {
