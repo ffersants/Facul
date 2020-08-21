@@ -29,7 +29,7 @@ public class Teste{
 }
 ```
 <br>
-<h4>:white_circle: Arrays</h4>
+<h2>:white_circle: Arrays</h2>
 <br>
 The things with arrays is just the declaring part, it's a little bit different from C and Javascript. Take a look... 
 <br>
@@ -43,7 +43,7 @@ public class TwoWaysOfDeclaringArrays{
 	}
 }	
 ```
-<br>
+
 You see that the syntax is
 <br> 
 <strong>
