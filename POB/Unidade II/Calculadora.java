@@ -1,18 +1,24 @@
 import java.util.Scanner;
 
 public class Calculadora{
-    public static void main(String[] args){
-        System.out.println("Você fará uma \n[A]dicao \n[S]ubtracao \n[M]ultiplicacaoo \n[D]ivisao");
-        double total = lerInput();
-        System.out.println("A soma dos valores eh " + total);
-    }
-
-    public static double lerInput(){
-        String input = new Scanner(System.in).nextLine();
-        double valorUm = lerDouble("Digite o valor um: ");
-        double valorDois = lerDouble("Digite o valor dois: ");
-        double fazerOperacao = soma(valorUm, valorDois);
-        return fazerOperacao;
+    public static void main(String[] args){       
+        double valorUm = lerDouble("Digite o valor 1: ");
+        char operador = lerOperador("Digite o operador da operacao:\n + para adicacao\n - para subtracao\n / para divisao\n * para multiplicacao");
+        double valorDois = lerDouble("Digite o valor 2: ");
+        double resultado = 0;
+        switch(operador){
+            case '+' : resultado = soma(valorUm, valorDois);
+            break;
+            case '-' : resultado = subtrai(valorUm, valorDois);
+            break;
+            case '*' : resultado = multiplica(valorUm, valorDois);
+            break;
+            case '/' : resultado = divide(valorUm, valorDois);
+            break;
+        }
+        
+        System.out.println(valorUm + " " + operador + " " + valorDois + " = " + resultado);
+   
     }
 
     public static double lerDouble(String texto){
@@ -20,7 +26,23 @@ public class Calculadora{
         return new Scanner(System.in).nextDouble();
     }
 
-    public static double soma(double numOne, double numDois){
-        return numOne + numDois;
+    public static char lerOperador(String operador){
+        System.out.println(operador);
+        return new Scanner(System.in).next().charAt(0);
+    }
+
+    public static double soma(double first, double second){
+        return first + second;
+    }
+
+    public static double subtrai(double first, double second){
+        return first - second;
+    }
+     public static double divide(double first, double second){
+        return first/second;
+    }
+
+     public static double multiplica(double first, double second){
+        return first*second;
     }
 }
