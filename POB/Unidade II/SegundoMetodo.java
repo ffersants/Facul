@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class SegundoMetodo{
+    //método principal
     public static void main(String[] args){
-        double num = lerDouble("Informe um salario: ", "Opa, valor inválido!", 0, 10);
-
+        double num = lerDouble("Informe um salario: ", "Opa, valor invalido!", 0, 1900);
+        System.out.println(num);
     }
 
     public static double lerDouble(String mensagem, String msgError, double min, double max){
