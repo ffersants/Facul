@@ -47,7 +47,7 @@ You see that the syntax is
 I've just experienced this while I was working on the second exercises from the first class in the second unity. 
 Those two .java file are stored in the same folder. 
 <br>
-<strong>First you create the class with the method that's going to be called in the other class file:</strong>
+<strong>First you create the class with the method that's going to be called in the other class file</strong>
 <br>
 ```java
 import java.util.Scanner;
@@ -62,7 +62,7 @@ public class PrintAndGetInput{
 	}
 }
 ```
-<strong>Now you create a new class and call that method that's in the other class and you want to use: </strong>
+<strong>Now you create a new class and call that method that's in the other class and you want to use</strong>
 ```java
 public class CallMethodGetInput{
     public static void main(String[] args){
