@@ -43,12 +43,14 @@ You see that the syntax is
 	</i>
 </strong>
 <br>
+
 <h2>:white_circle: Importing methods from classes in another file</h2>
+
 I've just experienced this while I was working on the second exercises from the first class in the second unity. 
-Those two .java file are stored in the same folder. 
+Those two java file are stored in the same folder. 
 <br>
-<strong>First you create the class with the method that's going to be called in the other class file</strong>
-<br>
+First you create the class with the method that's going to be called in the other class file
+
 ```java
 import java.util.Scanner;
 public class PrintAndGetInput{
@@ -62,7 +64,7 @@ public class PrintAndGetInput{
 	}
 }
 ```
-<strong>Now you create a new class and call that method that's in the other class and you want to use</strong>
+Now you create a new class and call that method that's in the other class and you want to use
 ```java
 public class CallMethodGetInput{
     public static void main(String[] args){
