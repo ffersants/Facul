@@ -12,7 +12,9 @@ public class HelloWorld{
 ```
 
 <br>
+
 <h2>:white_circle: Arrays</h2>
+
 <br>
 The things with arrays is just the declaring part, it's a little bit different from C and Javascript. Take a look... 
 <br>
@@ -42,9 +44,12 @@ You see that the syntax is
 	 	varType [ ] varName = {elements, in, their, position};
 	</i>
 </strong>
+
 <br>
 
 <h2>:white_circle: Importing methods from classes in another file</h2>
+
+<br>
 
 I've just experienced this while I was working on the second exercises from the first class in the second unity. 
 Those two java file are stored in the same folder. 
