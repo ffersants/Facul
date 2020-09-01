@@ -81,7 +81,16 @@ public class CallMethodGetInput{
 }
 ```
 <br>
-<h2>:heavy_exclamation_mark: Known Issues :heavy_exclamation_mark:</h2><br>
+<h2>:heavy_exclamation_mark: To remember :heavy_exclamation_mark:</h2>
+	<ul>
+		<li><strong>new Aluno( );</strong> é a instanciação de um objeto</li>
+		<li><strong>new Aluno[3];</strong> é instanciação de um array de objetos</li>
+	</ul>
+<br>
+
+<br>
+<h2>:heavy_exclamation_mark: Known Issues :heavy_exclamation_mark:</h2>
+<br>
 	<ul>
 		<li> Don't use simple 'quotation marks';</li>
 	</ul>
