@@ -12,7 +12,9 @@ public class HelloWorld{
 ```
 
 <br>
+
 <h2>:white_circle: Arrays</h2>
+
 <br>
 The things with arrays is just the declaring part, it's a little bit different from C and Javascript. Take a look... 
 <br>
@@ -42,8 +44,53 @@ You see that the syntax is
 	 	varType [ ] varName = {elements, in, their, position};
 	</i>
 </strong>
+
 <br>
-<h2>:heavy_exclamation_mark: Known Issues :heavy_exclamation_mark:</h2><br>
+
+<h2>:white_circle: Importing methods from classes in another file</h2>
+
+<br>
+
+I've just experienced this while I was working on the second exercises from the first class in the second unity. 
+Those two java file are stored in the same folder. 
+<br>
+First you create the class with the method that's going to be called in the other class file
+
+```java
+import java.util.Scanner;
+public class PrintAndGetInput{
+
+	public static void main(String [] args){
+	}
+	//this is the method that will be called
+	public static int printAndGetInput(String mensagem){
+		System.out.println(mensagem);
+		return new Scanner(System.in).nextInt();
+	}
+}
+```
+Now you create a new class and call that method that's in the other class and you want to use
+```java
+public class CallMethodGetInput{
+    public static void main(String[] args){
+        //that's the main part,I'm creating a variable of reference to that method in the other class
+        PrintAndGetInput callMethod = new PrintAndGetInput();
+        int number = callMethod.printAndGetInput("Type a number: ");
+        System.out.println("The number typed was... " + number);
+    }
+}
+```
+<br>
+<h2>:heavy_exclamation_mark: To remember :heavy_exclamation_mark:</h2>
+	<ul>
+		<li><strong>new Aluno( );</strong> é a instanciação de um objeto</li>
+		<li><strong>new Aluno[3];</strong> é instanciação de um array de objetos</li>
+	</ul>
+<br>
+
+<br>
+<h2>:heavy_exclamation_mark: Known Issues :heavy_exclamation_mark:</h2>
+<br>
 	<ul>
 		<li> Don't use simple 'quotation marks';</li>
 	</ul>
