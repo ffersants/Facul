@@ -81,8 +81,54 @@ public class CallMethodGetInput{
 }
 ```
 <br>
-<h2>:heavy_exclamation_mark: To remember :heavy_exclamation_mark:</h2>
+
+<h2>:white_circle: Comparing strings</h2>
+
+<br>
+
+The following code must return true or false?
+```java
+ String a = new String("Java");
+ String b = new String("Java");
+
+        if(a == b){
+            System.out.println("True -> Same value");
+        } else{
+            System.out.println("False -> Different value");
+        }
+```
+Well, the answear is <strong>FALSE</strong>! And what about this next one?
+```java
+String a = "Java";
+String b = "Java";
+
+        if(a == b){
+            System.out.println("True -> Same value");
+        } else{
+            System.out.println("False -> Different value");
+        }
+```
+The answear for the last is <strong>TRUE</strong>!
+<br>
+But whaaat?! Aren't they the same values??? Well... In the first case they were the same memory address while in the next they were different objects and most important also in different memory address. That's why it returned FALSE.
+<br>
+So now you might be worring... <strong>Which one is the right way to compare things between themselves? Use the method .equals() that belongs tot the class String, that can be checked <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html">here</a></strong>
+```java Object.equals(Object)```
+That's the right way of doing it. The following code will now return <strong>True -> Same value</strong>
+```java
+String a = new String("Java");
+String b = new String("Java");
+//attention now
+        if(a.equals(b)){
+            System.out.println("True -> Same value");
+        } else{
+            System.out.println("False -> Different value");
+        }
+```
+
+<br><h2>:heavy_exclamation_mark: To remember :heavy_exclamation_mark:</h2>
 	<ul>
+		<li><strong>new Object();</srtrong> it calls the constructor method of that class and intances an object that's attributed to the 			variable declared</li>
 		<li><strong>new Aluno( );</strong> é a instanciação de um objeto</li>
 		<li><strong>new Aluno[3];</strong> é instanciação de um array de objetos</li>
 	</ul>
