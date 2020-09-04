@@ -109,9 +109,9 @@ String b = "Java";
         }
 ```
 The answear for the last is <strong>TRUE</strong>!
-<br>
+<br><br>
 But whaaat?! Aren't they the same values??? Well... In the first case they were the same memory address while in the next they were different objects and most important also in different memory address. That's why it returned FALSE.
-<br>
+<br><br>
 So now you might be worring... <strong>Which one is the right way to compare things between themselves? Use the method .equals() that belongs tot the class String, that can be checked <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html">here</a></strong>
 ```java Object.equals(Object)```
 That's the right way of doing it. The following code will now return <strong>True -> Same value</strong>
@@ -131,6 +131,8 @@ String b = new String("Java");
 		<li><strong>new Object();</srtrong> it calls the constructor method of that class and intances an object that's attributed to the 			variable declared</li>
 		<li><strong>new Aluno( );</strong> é a instanciação de um objeto</li>
 		<li><strong>new Aluno[3];</strong> é instanciação de um array de objetos</li>
+		<li><strong>.size();</strong> When dealing with array list, the property length won't be able for you to discover the total of 				indexes in the array, cause in this case you must use the method <strong>.size()</strong> from the from the 					java.util.ArrayList package 
+		</li>
 	</ul>
 <br>
 
