@@ -17,10 +17,10 @@ public class Funcionario{
     private String matricula;
     private String cpf;
     private double salario;
-    private String cargo;
+    private int cargo;
     ///////////////////////////CONSTRUCTOR///////////////////////////
 
-    public Funcionario(String name, String matricula, String cpf, double salario, String cargo){
+    public Funcionario(String name, String matricula, String cpf, double salario, int cargo){
         setName(name);
         setMatricula(matricula);
         setCpf(cpf);
@@ -46,7 +46,7 @@ public class Funcionario{
         this.cpf = cpf;
     }
 
-    public void setCargo(String cargo){
+    public void setCargo(int cargo){
         this.cargo = cargo;
     }
 
@@ -65,9 +65,14 @@ public class Funcionario{
         return cpf;
     }
 
-    public String getCargo(){
+    public int getCargo(){
         return cargo;
     }
+
+    public double getImpostoDeRenda(Double salario){
+        return salario / 100 * 20 ;
+    }
+
 
      @Override
                 public String toString() {

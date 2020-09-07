@@ -10,10 +10,10 @@ public class main{
         
         ArrayList<Funcionario> funcionariosList = new ArrayList<Funcionario>();
        
-        int input = scanner.lerInt("Input inválido. Favor selecionar somente uma das opções disponíveis.\nSelecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda", "Input inválido. Favor selecionar somente uma das opções disponíveis.\nSelecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda", 1, 2);
+        int input = scanner.lerInt("Selecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda", "\nInput inválido. Favor selecionar somente uma das opções disponíveis.", 1, 2);
 
         if(input == 1){
-             int decideLoop = scanner.lerInt("Quantos funcionários deseja cadastrar?", "Input inválido.\nDigite 0 caso deseje cadastrar nenhum funcionário.", 0, 100);
+             int decideLoop = scanner.lerInt("Quantos funcionários deseja cadastrar?", "\nInput inválido.\nDigite 0 caso deseje cadastrar nenhum funcionário.", 0, 100);
     
              for(int i = 0; i != decideLoop; i++){
                  sysout.consoleLog("\n\nCadastrando o funcionario " + (i + 1));
@@ -24,9 +24,10 @@ public class main{
                 sysout.consoleLog("getImposto");
         }  
 
-        for(Funcionario seila : funcionariosList){
-            sysout.consoleLog(seila.toString());
-        }    
+         for(Funcionario seila : funcionariosList){
+            System.out.println(seila.getSalario());
+            System.out.println(seila.getImpostoDeRenda(seila.getSalario()));
+         }    
 
     }
 }

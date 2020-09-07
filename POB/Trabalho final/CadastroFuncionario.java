@@ -8,74 +8,38 @@ public class CadastroFuncionario{
         public static Funcionario cadastrarFuncionario(){
             // ArrayList<Funcionario> funcionariosList = new ArrayList<Funcionario>();
             Sysout sysout = new Sysout();
-            Scanner scanner = new Scanner(System.in);        
+            //Scanner scanner = new Scanner(System.in);
+            ScannerMEU scanner = new ScannerMEU();       
             String name;
             String matricula;
             String cpf;
             double salario;
-            String cargoString = "null";
+            int cargo;
 
-            //starts name
-            sysout.consoleLog("Digite o nome do funcionario: ");
-            name = scanner.nextLine();  
-            
-             if(name.equals("")){
+            name = scanner.lerString("Digite o nome do funcionario: ");
+            if(name.equals("")){
                 do{
-                    sysout.consoleLog("Input vazio. \nFavor digitar um valor valido.");
-                    name = new Scanner(System.in).nextLine();
+                    name = scanner.lerString("Digite o nome do funcionario: ");
                 } while(name.equals(""));     
             } 
-            //ends name
-            //starts matricula
-            sysout.consoleLog("Digite a matrícula deste funcionário:");
-            matricula = scanner.nextLine();
-            
-             if(matricula.equals("")){
+           
+            matricula = scanner.lerString("Digite a matrícula deste funcionário:");
+            if(matricula.equals("")){
                 do{
-                    sysout.consoleLog("Input vazio. \nFavor digitar um valor valido.");
-                    matricula = new Scanner(System.in).nextLine();
+                    matricula = scanner.lerString("Digite a matrícula deste funcionário:");
                 } while(matricula.equals(""));     
             }    
-            //ends matricula
-            //starts cpf
-            sysout.consoleLog("Digite o CPF deste funcionário:");
-            cpf = scanner.nextLine();
-
+          
+            cpf = scanner.lerString("Digite o CPF deste funcionário:");
             if(cpf.equals("")){
                 do{
-                    sysout.consoleLog("Input vazio. \nFavor digitar um valor valido.");
-                    cpf = new Scanner(System.in).nextLine();
+                    cpf = scanner.lerString("Digite o CPF deste funcionário:");
                 } while(cpf.equals(""));
             }
-            //ends cpf
-            //starts salario
-            sysout.consoleLog("Qual o salário deste funcionário?");
-            salario = scanner.nextDouble();
-    
-            if(salario <= 0){
-                do{
-                    sysout.consoleLog("Input inválido. \nDigite um salário válido: ");
-                    salario = new Scanner(System.in).nextDouble();
-                } while (salario <= 0);
-            }
-            //ends salario
-
-            sysout.consoleLog("Este funcionário é: \n[1] Diretor \n[2] Professor");
-            int cargo = scanner.nextInt();
+            
+            salario = scanner.lerDouble("Qual o salário deste funcionário?", "Valor inválido!", 1, Double.MAX_VALUE);
            
-            while(cargo != 1 && cargo != 2){
-                sysout.consoleLog("Input inválido. Favor selecionar somente uma das opções disponíveis. \nEste funcionário é: \n[1] Diretor \n[2] Professor");
-                cargo = scanner.nextInt();
-            }
-
-            if(cargo == 1){
-                cargoString = "Diretor";
-            } else if (cargo == 2){
-                cargoString = "Professor";
-            }
-
-            return new Funcionario(name, matricula, cpf, salario, cargoString);
-            //sysout.consoleLog(funcionario.toString());
-            //setFuncionario(funcionario);        
+            cargo = scanner.lerInt("Este funcionário é: \n[1] Diretor \n[2] Professor", "\nInput inválido. \nFavor selecionar somente uma das opções disponíveis. \nEste funcionário é: \n[1] Diretor \n[2] Professor", 1, 2);       
+            return new Funcionario(name, matricula, cpf, salario, cargo);
     }
 }
