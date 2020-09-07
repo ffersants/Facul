@@ -13,62 +13,59 @@ import java.lang.Double;
 public class Funcionario{
     
     //variables
-    String name;
-    String matricula;
-    double salario;
-    String cpf;
-    String admissaoAno;
+    private String name;
+    private String matricula;
+    private String cpf;
+    private double salario;
+    
+    ///////////////////////////CONSTRUCTOR///////////////////////////
+
+    public Funcionario(String name, String matricula, String cpf, double salario){
+        setName(name);
+        setMatricula(matricula);
+        setCpf(cpf);
+        setSalario(salario);
+    };
+
+    ///////////////////////////SET AREA//////////////////////////////
 
     public void setName(String name){
-        if(name.equals("")){
-            do{
-                System.out.println("Input vazio. \nFavor digitar um valor valido.");
-                name = new Scanner(System.in).nextLine();
-            } while(name.equals(""));     
-        } 
         this.name= name;
     }
 
-            public String getName(){
-                return name;
-            }
-
     public void setMatricula(String matricula){
-        if(matricula.equals("")){
-            do{
-                System.out.println("Input vazio. \nFavor digitar um valor valido.");
-                matricula = new Scanner(System.in).nextLine();
-            } while(matricula.equals(""));     
-        } 
-    
         this.matricula = matricula;
     }
 
-            public String getMatricula(){
-                return matricula;
-            }
-
-    public void setSalario(double salario){
+    public void setSalario(Double salario){
         this.salario = salario;
     }
 
-            public double getSalario(){
-                return salario;
-            }
-
-    public void setCpf(String cpf){
-        this.cpf = cpf;
-        if(cpf.equals("")){
-            do{
-                System.out.println("Input vazio. \nFavor digitar um valor valido.");
-                cpf = new Scanner(System.in).nextLine();
-            } while(cpf.equals(""));
-        }
-
+    public void setCpf(String cpf){        
         this.cpf = cpf;
     }
 
-            public String getCpf(){
-                return cpf;
-            }
+///////////////////////////GET AREA//////////////////////////////
+
+    public String getName(){
+        return name;
+    }
+    public String getMatricula(){
+        return matricula;
+    }
+    public double getSalario(){
+        return salario;
+    }
+    public String getCpf(){
+        return cpf;
+    }
+
+     @Override
+                public String toString() {
+                return ("Name: "+this.getName()+
+                        "\nMatricula: "+ this.getMatricula() +
+                        "\nCPF: " + this.getCpf() +
+                        "\nSalario: " + this.getSalario()
+                        );
+                }
 }
