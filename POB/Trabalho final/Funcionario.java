@@ -82,7 +82,7 @@ public class Funcionario{
         return cpf;
     }
 
-    private double getImpostoDeRenda(){
+    public double getImpostoDeRenda(){
         return 0;
         //este método será sobrescrito nas classes
     }

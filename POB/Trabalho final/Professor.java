@@ -9,7 +9,7 @@ public class Professor extends Funcionario{
         this.anoAdmissao = anoAdmissao;
     }
 
-    private double getImpostoDeRenda(){
+    public double getImpostoDeRenda(){
         return getSalario() * 0.20;
     }
 }

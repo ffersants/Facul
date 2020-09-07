@@ -5,7 +5,7 @@ public class Diretor extends Funcionario{
         this.tempoDeCasa = tempoDeCasa;
     }
 
-    private double getImpostoDeRenda(){
+    public double getImpostoDeRenda(){
         return getSalario() * 0.23;
     }
 }
