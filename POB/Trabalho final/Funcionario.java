@@ -17,14 +17,15 @@ public class Funcionario{
     private String matricula;
     private String cpf;
     private double salario;
-    
+    private String cargo;
     ///////////////////////////CONSTRUCTOR///////////////////////////
 
-    public Funcionario(String name, String matricula, String cpf, double salario){
+    public Funcionario(String name, String matricula, String cpf, double salario, String cargo){
         setName(name);
         setMatricula(matricula);
         setCpf(cpf);
         setSalario(salario);
+        setCargo(cargo);
     };
 
     ///////////////////////////SET AREA//////////////////////////////
@@ -45,6 +46,10 @@ public class Funcionario{
         this.cpf = cpf;
     }
 
+    public void setCargo(String cargo){
+        this.cargo = cargo;
+    }
+
 ///////////////////////////GET AREA//////////////////////////////
 
     public String getName(){
@@ -60,12 +65,17 @@ public class Funcionario{
         return cpf;
     }
 
+    public String getCargo(){
+        return cargo;
+    }
+
      @Override
                 public String toString() {
                 return ("Name: "+this.getName()+
                         "\nMatricula: "+ this.getMatricula() +
                         "\nCPF: " + this.getCpf() +
-                        "\nSalario: " + this.getSalario()
+                        "\nSalario: " + this.getSalario() +
+                        "\nCargo: " + this.getCargo()
                         );
                 }
 }

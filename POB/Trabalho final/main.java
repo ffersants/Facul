@@ -1,35 +1,42 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 
 public class main{
         
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        //ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
+        Sysout sysout = new Sysout();
         
-        System.out.println("Selecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda");
+        ArrayList<Funcionario> funcionariosList = new ArrayList<Funcionario>();
+        
+        sysout.consoleLog("Selecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda");
         int input = scanner.nextInt();
         
         while(input != 1 && input != 2){
-            System.out.println("Input inválido. Favor selecionar somente uma das opções disponíveis.\nSelecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda");
+            sysout.consoleLog("Input inválido. Favor selecionar somente uma das opções disponíveis.\nSelecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda");
             input = scanner.nextInt();
         }
 
         if(input == 1){
-             System.out.println("Quantos funcionários deseja cadastrar?");
+             sysout.consoleLog("Quantos funcionários deseja cadastrar?");
              int decideLoop = scanner.nextInt();
              while(decideLoop < 0){
-                System.out.println("Input inválido.\nDigite 0 caso deseje cadastrar nenhum funcionário.\nQuantos funcionários deseja cadastrar?");
+                sysout.consoleLog("Input inválido.\nDigite 0 caso deseje cadastrar nenhum funcionário.\nQuantos funcionários deseja cadastrar?");
                 decideLoop = scanner.nextInt();
              }
              for(int i = 0; i != decideLoop; i++){
-                 System.out.println("\n\nCadastrando o funcionario " + (i + 1));
-                 new CadastroFuncionario().cadastrarFuncionario();
+                 sysout.consoleLog("\n\nCadastrando o funcionario " + (i + 1));
+                 Funcionario funcionario = new CadastroFuncionario().cadastrarFuncionario();
+                 funcionariosList.add(funcionario);
              }
 
         } else if(input == 2){
-                System.out.println("getImposto");
-        }      
+                sysout.consoleLog("getImposto");
+        }  
+
+        for(Funcionario seila : funcionariosList){
+            sysout.consoleLog(seila.toString());
+        }    
 
     }
 }
