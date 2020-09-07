@@ -12,22 +12,43 @@ import java.lang.Double;
 
 public class Funcionario{
     
+    Sysout sysout = new Sysout();
+    ScannerMEU scanner = new ScannerMEU();
+
     //variables
     private String name;
     private String matricula;
     private String cpf;
     private double salario;
-    private int cargo;
     ///////////////////////////CONSTRUCTOR///////////////////////////
-
-    public Funcionario(String name, String matricula, String cpf, double salario, int cargo){
+    public void cadastrar(){
+        String name = scanner.lerString("Digite o nome do funcionario: ");
+        if(name.equals("")){
+            do{
+                name = scanner.lerString("Digite o nome do funcionario: ");
+            } while(name.equals(""));     
+        } 
         setName(name);
+        
+        String matricula = scanner.lerString("Digite a matrícula deste funcionário:");
+        if(matricula.equals("")){
+            do{
+                matricula = scanner.lerString("Digite a matrícula deste funcionário:");
+            } while(matricula.equals(""));     
+        }    
         setMatricula(matricula);
+        
+        String cpf = scanner.lerString("Digite o CPF deste funcionário:");
+        if(cpf.equals("")){
+            do{
+                cpf = scanner.lerString("Digite o CPF deste funcionário:");
+            } while(cpf.equals(""));
+        }
         setCpf(cpf);
+        
+        double salario = scanner.lerDouble("Qual o salário deste funcionário?", "Valor inválido!", 1, Double.MAX_VALUE);
         setSalario(salario);
-        setCargo(cargo);
-    };
-
+    }
     ///////////////////////////SET AREA//////////////////////////////
 
     public void setName(String name){
@@ -46,10 +67,6 @@ public class Funcionario{
         this.cpf = cpf;
     }
 
-    public void setCargo(int cargo){
-        this.cargo = cargo;
-    }
-
 ///////////////////////////GET AREA//////////////////////////////
 
     public String getName(){
@@ -65,22 +82,17 @@ public class Funcionario{
         return cpf;
     }
 
-    public int getCargo(){
-        return cargo;
+    private double getImpostoDeRenda(){
+        return 0;
+        //este método será sobrescrito nas classes
     }
-
-    public double getImpostoDeRenda(Double salario){
-        return salario / 100 * 20 ;
-    }
-
 
      @Override
                 public String toString() {
                 return ("Name: "+this.getName()+
                         "\nMatricula: "+ this.getMatricula() +
                         "\nCPF: " + this.getCpf() +
-                        "\nSalario: " + this.getSalario() +
-                        "\nCargo: " + this.getCargo()
+                        "\nSalario: " + this.getSalario()
                         );
                 }
 }
