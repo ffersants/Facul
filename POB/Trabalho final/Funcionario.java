@@ -25,28 +25,28 @@ public class Funcionario{
         String name = scanner.lerString("Digite o nome do funcionario: ");
         if(name.equals("")){
             do{
-                name = scanner.lerString("Digite o nome do funcionario: ");
+                name = scanner.lerString("\nInput inválido. \nDigite o nome do funcionario: ");
             } while(name.equals(""));     
         } 
         setName(name);
         
-        String matricula = scanner.lerString("Digite a matrícula deste funcionário:");
+        String matricula = scanner.lerString("\nDigite a matrícula deste funcionário:");
         if(matricula.equals("")){
             do{
-                matricula = scanner.lerString("Digite a matrícula deste funcionário:");
+                matricula = scanner.lerString("\nInput inválido. \nDigite a matrícula deste funcionário:");
             } while(matricula.equals(""));     
         }    
         setMatricula(matricula);
         
-        String cpf = scanner.lerString("Digite o CPF deste funcionário:");
-        if(cpf.equals("")){
+        String cpf = scanner.lerString("\nDigite o CPF deste funcionário: \nNão insira pontos e nem traços");
+        if(cpf.equals("") || cpf.length() != 11){
             do{
-                cpf = scanner.lerString("Digite o CPF deste funcionário:");
-            } while(cpf.equals(""));
+                cpf = scanner.lerString("\nCPF inválido. \nDigite o CPF deste funcionário: \nNão insira pontos e nem traços");
+            } while(cpf.equals("") || cpf.length() != 11);
         }
         setCpf(cpf);
         
-        double salario = scanner.lerDouble("Qual o salário deste funcionário?", "Valor inválido!", 1, Double.MAX_VALUE);
+        double salario = scanner.lerDouble("\nQual o salário deste funcionário?", "Valor inválido!\n", 1046, Double.MAX_VALUE);
         setSalario(salario);
     }
     ///////////////////////////SET AREA//////////////////////////////

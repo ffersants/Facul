@@ -10,8 +10,8 @@ public class main{
         Diretor diretor = new Diretor();
         Professor professor = new Professor();
         
-        int decideLoop = scanner.lerInt("Vamos começar! \nQuantos funcionários deseja cadastrar?", "\nInput inválido.\nDigite 0 caso deseje cadastrar nenhum funcionário.", 0, Integer.MAX_VALUE);
-        int cargo = scanner.lerInt("\nVocê cadastrará: \n[1] Diretor \n[2] Professor", "\nInput inválido. Favor selecionar somente uma das opções disponíveis.", 1, 2);
+        int decideLoop = scanner.lerInt("\nVamos começar! \nQuantos funcionários deseja cadastrar?", "\nInput inválido.\nDigite 0 caso deseje cadastrar nenhum funcionário.", 0, Integer.MAX_VALUE);
+        int cargo = scanner.lerInt("\nVocê cadastrará: \n[1] Diretor \n[2] Professor", "\nInput inválido. \nFavor selecionar somente uma das opções disponíveis.", 1, 2);
         int decisao;
         do{
             if(cargo == 1){
@@ -21,7 +21,7 @@ public class main{
                     sysout.consoleLog("\n\nCadastrando o diretor " + (i));
                     // Diretor diretor = new Diretor();
                     diretor.cadastrar(); 
-                    diretor.setTempoDeCasa(scanner.lerInt("Há quantos meses este funcionário trabalha nesta escola? ", "\nValor inválido!", 0, Integer.MAX_VALUE));
+                    diretor.setTempoDeCasa(scanner.lerInt("\nHá quantos meses este funcionário trabalha nesta escola? ", "\nValor inválido!", 0, Integer.MAX_VALUE));
                     // ImpostoDeRenda imposto = new ImpostoDeRenda();
                     imposto.setPagantesTotal(i);
                     // //System.out.println("Pagantes total " + imposto.getPagantesTotal());
@@ -35,7 +35,7 @@ public class main{
                     sysout.consoleLog("\n\nCadastrando o professor " + i);
                     // Professor professor = new Professor();
                     professor.cadastrar();
-                    professor.setAnoAdmissao(scanner.lerInt("Informe o ano de admissão deste funcionário: ", "\nValor inválido!", 1930, 2020));
+                    professor.setAnoAdmissao(scanner.lerInt("\nInforme o ano de admissão deste funcionário: ", "\nValor inválido!", 1930, 2020));
                     // ImpostoDeRenda imposto = new ImpostoDeRenda();
                     imposto.setPagantesTotal(i);
                     // //System.out.println("Pagantes total " + imposto.getPagantesTotal());
