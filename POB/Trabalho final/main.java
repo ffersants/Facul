@@ -10,14 +10,14 @@ public class main{
         
         ArrayList<Funcionario> funcionariosList = new ArrayList<Funcionario>();
        
-        //int input = scanner.lerInt("\nSelecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda", "\nInput inválido. Favor selecionar somente uma das opções disponíveis.", 1, 2);
+        
 
         int cargo = scanner.lerInt("\nVocê cadastrará: \n[1] Diretor \n[2] Professor", "\nInput inválido. Favor selecionar somente uma das opções disponíveis.", 1, 2);
         int decideLoop = scanner.lerInt("Quantos funcionários deseja cadastrar?", "\nInput inválido.\nDigite 0 caso deseje cadastrar nenhum funcionário.", 0, 100);
         
         if(cargo == 1){
             //DIRETOR
-            for(int i = 1; i != decideLoop; i++){
+            for(int i = 1; i <= decideLoop; i++){
                 sysout.consoleLog("\n\nCadastrando o diretor " + (i));
                 Diretor diretor = new Diretor();
                 diretor.cadastrar(); 
@@ -25,9 +25,9 @@ public class main{
                
                 ImpostoDeRenda imposto = new ImpostoDeRenda();
                 imposto.setPagantesTotal(i);
-                System.out.println("Pagantes total " + imposto.getPagantesTotal());
+                //System.out.println("Pagantes total " + imposto.getPagantesTotal());
                 imposto.setImpostoTotal(diretor.getImpostoDeRenda());
-                System.out.println(imposto.getMediaImposto());
+                //System.out.println(imposto.getMediaImposto());
             }
 
         } 
@@ -38,14 +38,16 @@ public class main{
                 Professor professor = new Professor();
                 professor.cadastrar();
                 professor.setAnoAdmissao(scanner.lerInt("Informe o ano de admissão deste funcionário: ", "\nValor inválido!", 1930, 2020));
+                   
+                ImpostoDeRenda imposto = new ImpostoDeRenda();
+                imposto.setPagantesTotal(i);
+                //System.out.println("Pagantes total " + imposto.getPagantesTotal());
+                imposto.setImpostoTotal(diretor.getImpostoDeRenda());
+                //System.out.println(imposto.getMediaImposto());
             }  
         }
-        
 
-        //  for(Funcionario seila : funcionariosList){
-        //     System.out.println(seila.getSalario());
-        //     System.out.println(seila.getImpostoDeRenda(seila.getSalario()));
-        //  }    
+        //int input = scanner.lerInt("\nSelecione uma das opções a seguir: \n[1] Cadastrar funcionario \n[2]Verificar imposto de renda", "\nInput inválido. Favor selecionar somente uma das opções disponíveis.", 1, 2);
 
     }
 }
