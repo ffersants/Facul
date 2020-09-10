@@ -133,6 +133,16 @@ String b = new String("Java");
 		<li><strong>new Aluno[3];</strong> é instanciação de um array de objetos</li>
 		<li><strong>.size();</strong> When dealing with array list, the property length won't be able for you to discover the total of 				indexes in the array, cause in this case you must use the method <strong>.size()</strong> from the from the 					java.util.ArrayList package 
 		</li>
+		<li>
+			 Java possui <strong>3 modificadores de acesso</strong><br>
+			 • private<br> 
+			 • protected<br>
+			 • public <br> 
+			E também <strong>4 níveis de acesso</strong><br> 
+			• na própria classe (private)<br>
+			• por pacote ou herança (protected)<br>
+			• de qualquer lugar (public)<br>
+			• somente por pacote (default, sem declaração)<br>
 	</ul>
 <br>
 
